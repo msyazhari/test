@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grade System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="refreshList()">
+    <div class="container p-16">
+        <div class="card">
+            <h1 class="card-title">Create Student</h1>
+            <div class="card-body">
+                <form id="create">
+                    <div>
+                        <label for="studentCode">Student Code</label>
+                        <input id="studentCode" type="text" required>
+                    </div>
+                    <div class="mt-8">
+                        <label for="firstName">First Name</label>
+                        <input id="firstName" type="text" required>
+                    </div>
+                    <div class="mt-8">
+                        <label for="lastName">Last Name</label>
+                        <input id="lastName" type="text" required>
+                    </div>
+                    <div class="flex justify-end mt-8">
+                        <button class="button button-red" type="reset">Reset</button>
+                        <button class="button button-green ml-8" type="submit">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-16">
+            <h1 class="card-title">Record Grades</h1>
+            <div id="record" class="card-body">
+                <form id="find" onreset="clr()">
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <label for="code">Student Code</label>
+                            <input id="code" type="text" required>
+                        </div>
+                        <div class="flex">
+                            <button class="button button-red" type="reset">Reset</button>
+                            <button class="button button-green ml-8" type="submit">Find</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-16">
+            <h1 class="card-title">Students List</h1>
+            <div id="list"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
